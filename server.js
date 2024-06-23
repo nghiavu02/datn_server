@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: ["https://datn-client.onrender.com"],
+    origin: process.env.URL_CLIENT,
     methods: ["POST", "PUT", "GET", "DELETE"],
     credentials: true,
   })
