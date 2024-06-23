@@ -5,7 +5,6 @@ const uploader = require("../config/cloudinary.config");
 
 router.post(
   "/",
-  [verifyAccessToken, isAdmin],
   uploader.fields([
     { name: "images", maxCount: 10 },
     { name: "thumb", maxCount: 1 },
