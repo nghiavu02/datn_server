@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: ["https://datn-client-liart.vercel.app"],
+    origin: ["https://datn-client.onrender.com"],
     methods: ["POST", "PUT", "GET", "DELETE"],
     credentials: true,
   })
