@@ -8,19 +8,19 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: ["https://datn-client-liart.vercel.app"],
     methods: ["POST", "PUT", "GET", "DELETE"],
     credentials: true,
   })
 );
 app.use(cookieParser());
-const port = process.env.PORT || 8888;
+const port = 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 dbConnect();
 initRoutes(app);
 
-app.use("/hello", (req, res) => {
+app.get("/", (req, res) => {
   res.send("hello word");
 });
 
